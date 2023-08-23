@@ -1,9 +1,9 @@
 package com.finder.demo.service;
 
 
+import com.finder.demo.exception.UserNotFoundException;
 import com.finder.demo.util.Branch;
 import com.finder.demo.util.Repo;
-import com.finder.demo.exception.UserNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -50,15 +50,12 @@ public class RepoServiceImpl implements RepoService {
     }
 
 
-
     public Repo[] getNonForkUserRepositories(String username) {
         Repo[] repositories = getUserRepositories(username);
         return Arrays.stream(repositories)
                 .filter(repository -> !repository.isFork())
                 .toArray(Repo[]::new);
     }
-
-
 
 
 }

@@ -1,7 +1,6 @@
 package com.finder.demo.util;
 
 import lombok.Data;
-import lombok.Getter;
 
 @Data
 public class Branch {

@@ -9,12 +9,6 @@ public class Repo {
     private Owner owner;
     private Branch[] branches;
     private boolean fork;
-
-    public boolean isFork() {
-        return fork;
-    }
-
-
     @Data
     public static class Owner {
         private String login;

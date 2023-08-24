@@ -3,6 +3,8 @@ package com.finder.demo.service;
 import com.finder.demo.util.Branch;
 import com.finder.demo.util.Repo;
 
+import java.util.List;
+
 
 public interface RepoService {
 
@@ -10,10 +12,10 @@ public interface RepoService {
 
     public Branch[] getRepositoryBranches(String owner, String repo);
 
-    public void setBranchesForRepo(Repo[] repoArray);
+    public void setBranchesForRepo(List<Repo> repoList);
 
 
-    public Repo[] getNonForkUserRepositories(String username);
+    public List<Repo> getNonForkUserRepositories(String username);
 
 
 }
